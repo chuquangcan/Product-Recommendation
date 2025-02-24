@@ -1,4 +1,5 @@
 Sử dụng các mô hình học máy và đưa ra dự đoán sản phẩm sẽ mua cho khách hàng
 Hướng dẫn chạy:
+- Đầu tiên, tải các thư viện có trong file requirements.txt
 - Chạy file Clean.ipynb trước với tập dữ liệu đề bài cho
 - Sau đó lần lượt chạy file Visualize.ipynb và cuối cùng là hai file mô hình Model_KNN.ipynb và Ensemble_model.ipynb
