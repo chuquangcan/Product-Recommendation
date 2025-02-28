@@ -1,66 +1,62 @@
-# README: Product Purchase Prediction using Machine Learning
+# Dự đoán sản phẩm khách hàng sẽ mua bằng Học máy
 
-## Overview
-This project applies machine learning models to predict the products that customers are likely to purchase. By leveraging customer behavior and financial data, the system aims to provide personalized product recommendations to improve customer experience and engagement.
+## 1. Giới thiệu
+Dự án này áp dụng các mô hình học máy để dự đoán sản phẩm mà khách hàng có khả năng mua tiếp theo dựa trên dữ liệu giao dịch và hành vi tài chính của họ. Điều này giúp ngân hàng tối ưu hóa hệ thống gợi ý sản phẩm, cải thiện trải nghiệm khách hàng và tăng hiệu suất kinh doanh.
 
-## Installation & Setup
-To run the project, follow these steps:
-1. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Preprocess the dataset:
-   - Run `Clean.ipynb` to clean and prepare the dataset.
-3. Perform data visualization:
-   - Run `Visualize.ipynb` to explore and analyze the dataset.
-4. Train machine learning models:
-   - Execute `Model_KNN.ipynb` and `Ensemble_model.ipynb` to train and evaluate models.
+## 2. Hướng dẫn chạy
+### Yêu cầu môi trường
+Trước khi chạy dự án, hãy đảm bảo cài đặt đầy đủ các thư viện cần thiết bằng cách sử dụng tệp `requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
 
----
-## I. Problem Statement
-A retail and personal finance bank aims to enhance its product recommendation system. The current approach results in imbalanced exposure, where a subset of customers receives multiple suggestions while others receive none. This discrepancy impacts customer satisfaction and engagement.
+### Các bước thực hiện
+1. **Tiền xử lý dữ liệu:**
+   - Chạy tệp `Clean.ipynb` để làm sạch và chuẩn bị dữ liệu.
+2. **Khám phá dữ liệu:**
+   - Chạy `Visualize.ipynb` để phân tích và trực quan hóa dữ liệu.
+3. **Huấn luyện mô hình:**
+   - Chạy `Model_KNN.ipynb` để huấn luyện mô hình KNN.
+   - Chạy `Ensemble_model.ipynb` để huấn luyện mô hình tổng hợp.
 
-To address this, the goal is to develop a smarter, data-driven recommendation system that utilizes customer financial behavior and product usage trends to generate more relevant and balanced product suggestions.
+## 3. Bài toán đặt ra
+Ngân hàng cung cấp các sản phẩm tài chính như thẻ tín dụng, tài khoản tiết kiệm, vay thế chấp, v.v. Tuy nhiên, hệ thống đề xuất sản phẩm hiện tại chưa hiệu quả, dẫn đến mất cân đối trong việc tiếp cận khách hàng. Một số khách hàng nhận được quá nhiều gợi ý, trong khi nhiều người khác lại bị bỏ sót.
 
-## II. Objectives
-- Develop an effective predictive model to understand customer needs and recommend suitable products.
-- Improve customer satisfaction by ensuring balanced product exposure.
-- Enhance cross-selling and upselling strategies to drive revenue growth and competitive advantage.
+### Mục tiêu
+- Xây dựng mô hình dự đoán chính xác nhu cầu sản phẩm của từng khách hàng.
+- Cải thiện trải nghiệm cá nhân hóa, tăng mức độ hài lòng và trung thành của khách hàng.
+- Hỗ trợ chiến lược bán chéo (cross-selling) và bán thêm (up-selling), tối ưu hóa doanh thu.
 
-## III. Key Requirements
-### 1. Data Discovery & Cleaning
-- Use visualization tools to explore data insights regarding customers, products, and business trends.
-- Handle missing values, outliers, and inconsistencies for accurate analysis.
+## 4. Yêu cầu thực hiện
+### 1. Khám phá & Làm sạch dữ liệu
+- Phân tích dữ liệu về khách hàng, sản phẩm, thời gian giao dịch.
+- Xử lý giá trị thiếu, dữ liệu ngoại lệ và không nhất quán.
 
-### 2. Feature Engineering
-- Create meaningful derived features to enhance model performance.
-- Select the most impactful features for prediction.
+### 2. Xây dựng đặc trưng (Feature Engineering)
+- Tạo ra các biến đặc trưng có ý nghĩa phục vụ mô hình.
+- Lựa chọn các đặc trưng quan trọng nhất giúp tăng độ chính xác của dự đoán.
 
-### 3. Model Training
-- Experiment with various techniques, including:
-  - Probabilistic models
-  - Regression models
-  - Collaborative filtering
-  - Deep learning
-  - Ensemble learning
-- Evaluate model performance using **Mean Average Precision (MAP)**.
+### 3. Huấn luyện mô hình
+- Áp dụng nhiều kỹ thuật học máy như hồi quy, lọc cộng tác (collaborative filtering), học sâu (deep learning) và mô hình tổng hợp (ensemble model).
+- Đánh giá hiệu suất mô hình bằng chỉ số Mean Average Precision (MAP).
 
-### 4. Prediction Generation
-- Generate personalized product recommendations for each customer at the prediction time.
+### 4. Dự đoán sản phẩm
+- Đối với mỗi khách hàng tại thời điểm dự đoán, xác định danh sách sản phẩm phù hợp để gợi ý.
 
-### 5. Code Optimization
-- Enhance computational efficiency to handle large-scale data.
-- Implement performance improvements through code optimization techniques.
+### 5. Tối ưu hóa mã nguồn
+- Cải thiện tốc độ và hiệu suất xử lý dữ liệu lớn.
+- Tối ưu hóa thuật toán nhằm đảm bảo mô hình hoạt động hiệu quả.
 
-### 6. Presentation & Insights
-- Visualize data findings and model outcomes through charts, tables, and storytelling techniques.
-- Provide actionable insights based on analysis and model predictions.
+### 6. Trình bày kết quả
+- Trực quan hóa dữ liệu, kết quả dự đoán bằng bảng biểu, biểu đồ.
+- Giải thích phương pháp tiếp cận và phân tích ý nghĩa của các kết quả.
 
-## IV. Data Description
-- The dataset includes **1.5 years of customer behavior data** from a banking institution.
-- Data spans from **January 28, 2015, to May 28, 2016**, with monthly records of product ownership.
-- The goal is to predict additional products a customer may purchase in **May 2016**, excluding those they already owned in **April 2016**.
-- Relevant product indicators are stored in columns `ind_(xyz)_ult1`, spanning columns **25 to 48** in the training dataset.
+## 5. Mô tả dữ liệu
+Ngân hàng cung cấp dữ liệu giao dịch của khách hàng trong **1,5 năm**, từ **28/01/2015 đến 28/05/2016**. Dữ liệu này bao gồm thông tin về các sản phẩm mà khách hàng đã sở hữu mỗi tháng.
 
-Dataset source: [Kaggle - DataFlow 2025 Product Recommendation](https://www.kaggle.com/datasets/grizmo/dataflow2025-product-recommendation)
+### Nhiệm vụ dự đoán
+- Dự đoán các sản phẩm khách hàng sẽ mua vào **tháng cuối cùng (28/05/2016)**.
+- Các sản phẩm cần dự đoán nằm trong các cột `ind_(xyz)_ult1` (cột 25 đến 48 trong dữ liệu huấn luyện).
+- Loại trừ những sản phẩm mà khách hàng đã sở hữu vào **ngày 28/04/2016**.
 
+**Bộ dữ liệu:** [Kaggle Dataset](https://www.kaggle.com/datasets/grizmo/dataflow2025-product-recommendation)
